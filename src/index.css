@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --color-brand-green: #AAF38B;
+    --font-sans: Inter, sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    background-color: black;
+    color: white;
+    antialiased: true;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Utilities for glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
