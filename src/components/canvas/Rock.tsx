@@ -6,7 +6,7 @@ import * as THREE from "three";
 export const Rock = (props: any) => {
     const meshRef = useRef<THREE.Mesh>(null);
 
-    useFrame((state, delta) => {
+    useFrame((_, delta) => {
         if (meshRef.current) {
             meshRef.current.rotation.x += delta * 0.1;
             meshRef.current.rotation.y += delta * 0.15;

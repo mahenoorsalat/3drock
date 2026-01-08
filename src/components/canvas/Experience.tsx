@@ -17,7 +17,7 @@ export const Experience = () => {
 
             <Environment preset="city" blur={1} />
 
-            <ScrollControls pages={3} damping={0.1}>
+            <ScrollControls pages={3} damping={0.4}>
                 {/* 3D Content behaving with scroll */}
                 <Scene />
 
@@ -25,7 +25,7 @@ export const Experience = () => {
                 <Overlay />
             </ScrollControls>
 
-            <EffectComposer disableNormalPass>
+            <EffectComposer>
                 <Bloom luminanceThreshold={1} mipmapBlur intensity={1.5} radius={0.4} />
                 <Noise opacity={0.05} />
                 <Vignette eskil={false} offset={0.1} darkness={1.1} />

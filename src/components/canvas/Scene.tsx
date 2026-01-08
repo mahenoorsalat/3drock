@@ -8,12 +8,9 @@ export const Scene = () => {
     const scroll = useScroll();
     const rockGroup = useRef<THREE.Group>(null);
 
-    useFrame((state, delta) => {
+    useFrame((_, delta) => {
         // Scroll based animations
         // scroll.offset is 0 to 1
-        const r1 = scroll.range(0, 1 / 3); // Page 1 action
-        const r2 = scroll.range(1 / 3, 1 / 3); // Page 2 action
-        const r3 = scroll.range(2 / 3, 1 / 3); // Page 3 action
 
         if (rockGroup.current) {
             // Base rotation
